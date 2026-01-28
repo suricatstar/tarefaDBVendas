@@ -1,4 +1,4 @@
-package br.com.andyano.dao.generic.jdbc;
+package main.java.br.com.andyano.dao.generic.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -29,7 +29,7 @@ public class ConnectionFactory {
     public static Connection initConnection(){
         try{
             return DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/exercicioMod29","postgres","andyano1234");
+                    "jdbc:postgresql://localhost:5432/vendas","postgres","12345678");
 
         }catch(SQLException e){
             throw  new RuntimeException(e);

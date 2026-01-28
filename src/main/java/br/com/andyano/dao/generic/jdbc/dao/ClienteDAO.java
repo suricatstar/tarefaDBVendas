@@ -1,7 +1,7 @@
-package br.com.andyano.dao.generic.jdbc.dao;
+package main.java.br.com.andyano.dao.generic.jdbc.dao;
 
-import br.com.andyano.dao.generic.jdbc.ConnectionFactory;
-import br.com.andyano.domain.Cliente;
+import main.java.br.com.andyano.dao.generic.jdbc.ConnectionFactory;
+import main.java.br.com.andyano.domain.Cliente;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static br.com.andyano.dao.generic.jdbc.ConnectionFactory.initConnection;
+import static main.java.br.com.andyano.dao.generic.jdbc.ConnectionFactory.initConnection;
 
 /**
  * @author anderson.salviano

@@ -1,4 +1,4 @@
-package br.com.andyano;
+package main.java.br.com.andyano;
 
 /**
  * @author anderson.salviano

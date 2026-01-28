@@ -2,13 +2,15 @@ package main.java.br.com.andyano.domain;
 
 /**
  * @author anderson.salviano
- * Criado em: 15/10/2025
+ *         Criado em: 15/10/2025
  */
-public class Cliente {
+public class Produto {
 
     private Long id;
     private String codigo;
     private String nome;
+    private String descricao;
+    private Double valor;
 
     public Long getId() {
         return id;
@@ -32,5 +34,21 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public void setValor(Double valor) {
+        this.valor = valor;
     }
 }

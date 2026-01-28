@@ -1,8 +1,8 @@
-package br.com.andyano;
+package test.java.br.com.andyano;
 
-import br.com.andyano.dao.generic.jdbc.dao.ClienteDAO;
-import br.com.andyano.dao.generic.jdbc.dao.IClienteDAO;
-import br.com.andyano.domain.Cliente;
+import main.java.br.com.andyano.dao.generic.jdbc.dao.ClienteDAO;
+import main.java.br.com.andyano.dao.generic.jdbc.dao.IClienteDAO;
+import main.java.br.com.andyano.domain.Cliente;
 import org.junit.Assert;
 import org.junit.Test;
 

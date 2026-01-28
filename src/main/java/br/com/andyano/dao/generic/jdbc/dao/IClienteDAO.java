@@ -1,6 +1,6 @@
-package br.com.andyano.dao.generic.jdbc.dao;
+package main.java.br.com.andyano.dao.generic.jdbc.dao;
 
-import br.com.andyano.domain.Cliente;
+import main.java.br.com.andyano.domain.Cliente;
 
 import java.util.List;
 
