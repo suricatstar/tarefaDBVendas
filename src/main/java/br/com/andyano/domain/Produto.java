@@ -11,6 +11,7 @@ public class Produto {
     private String nome;
     private String descricao;
     private Double valor;
+    private Integer estoque;
 
     public Long getId() {
         return id;
@@ -50,5 +51,13 @@ public class Produto {
 
     public void setValor(Double valor) {
         this.valor = valor;
+    }
+
+    public Integer getEstoque() {
+        return estoque;
+    }
+
+    public void setEstoque(Integer estoque) {
+        this.estoque = estoque;
     }
 }

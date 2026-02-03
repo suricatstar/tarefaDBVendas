@@ -115,9 +115,11 @@ public class ClienteDAO implements IClienteDAO{
                 Long id = rs.getLong("ID");
                 String nome =  rs.getString("NOME");
                 String cd =  rs.getString("CODIGO");
+                String numTelefone = rs.getString("NUM_TELEFONE");
                 cliente.setId(id);
                 cliente.setNome(nome);
                 cliente.setCodigo(cd);
+                cliente.setNum_telefone(numTelefone);
                 list.add(cliente);
 
             }
@@ -152,20 +154,21 @@ public class ClienteDAO implements IClienteDAO{
 
     private String getSqlInsert(){
         StringBuilder sb = new StringBuilder();
-        sb.append("INSERT INTO tb_cliente (CODIGO,NOME)");
-        sb.append(" VALUES (?,?)");
+        sb.append("INSERT INTO tb_cliente (CODIGO,NOME,NUM_TELEFONE)");
+        sb.append(" VALUES (?,?,?)");
         return sb.toString();
     }
 
     private void adicionarParametrosInsert(PreparedStatement stm, Cliente cliente) throws SQLException {
         stm.setString(1,cliente.getCodigo());
         stm.setString(2,cliente.getNome());
+        stm.setString(3,cliente.getNum_telefone());
     }
 
     private String getSqlUpdate(){
         StringBuilder sb = new StringBuilder();
         sb.append("UPDATE tb_cliente");
-        sb.append(" SET nome = ?, CODIGO = ?");
+        sb.append(" SET nome = ?, CODIGO = ?, NUM_TELEFONE = ?");
         sb.append(" WHERE id = ?");
         return sb.toString();
     }
@@ -173,7 +176,8 @@ public class ClienteDAO implements IClienteDAO{
     private void adicionarParametrosUpdate(PreparedStatement stm, Cliente cliente) throws SQLException{
         stm.setString(1, cliente.getNome());
         stm.setString(2, cliente.getCodigo());
-        stm.setLong(3,cliente.getId());
+        stm.setString(3, cliente.getNum_telefone());
+        stm.setLong(4,cliente.getId());
     }
 
     private String getSqlDelete(){

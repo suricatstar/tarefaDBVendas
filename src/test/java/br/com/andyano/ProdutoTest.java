@@ -38,6 +38,7 @@ public class ProdutoTest {
         assertEquals("Devem ter o mesmo nome", produto.getNome(), produtoBD.getNome());
         assertEquals("Devem ter a mesma descrição", produto.getDescricao(), produtoBD.getDescricao());
         assertEquals("Devem ter o mesmo valor", produto.getValor(), produtoBD.getValor());
+        assertEquals("Devem ter o mesmo estoque", produto.getEstoque(), produtoBD.getEstoque());
 
         Integer countDel = produtoDAO.excluir(produtoBD);
         assertTrue(countDel == 1);
@@ -60,6 +61,7 @@ public class ProdutoTest {
         Assert.assertNotNull(produtoBD);
         assertEquals("Devem ter o mesmo código", produto.getCodigo(), produtoBD.getCodigo());
         assertEquals("Devem ter o mesmo nome", produto.getNome(), produtoBD.getNome());
+        assertEquals("Devem ter o mesmo estoque", produto.getEstoque(), produtoBD.getEstoque());
 
         Integer countDel = produtoDAO.excluir(produtoBD);
         assertTrue(countDel == 1);
@@ -82,6 +84,7 @@ public class ProdutoTest {
         Assert.assertNotNull(produtoBD);
         assertEquals("Devem ter o mesmo código", produto.getCodigo(), produtoBD.getCodigo());
         assertEquals("Devem ter o mesmo nome", produto.getNome(), produtoBD.getNome());
+        assertEquals("Devem ter o mesmo estoque", produto.getEstoque(), produtoBD.getEstoque());
 
         Integer countDel = produtoDAO.excluir(produtoBD);
         assertTrue(countDel == 1);
@@ -139,6 +142,7 @@ public class ProdutoTest {
         Assert.assertNotNull(produtoBD);
         assertEquals("Devem ter o mesmo código", produto.getCodigo(), produtoBD.getCodigo());
         assertEquals("Devem ter o mesmo nome", produto.getNome(), produtoBD.getNome());
+        assertEquals("Devem ter o mesmo estoque", produto.getEstoque(), produtoBD.getEstoque());
 
         // Atualiza os dados do produto
         produtoBD.setCodigo("P02");

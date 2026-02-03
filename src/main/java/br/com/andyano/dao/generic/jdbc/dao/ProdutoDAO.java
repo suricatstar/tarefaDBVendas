@@ -76,11 +76,13 @@ public class ProdutoDAO implements IProdutoDAO {
                 String cd = rs.getString("CODIGO");
                 String descricao = rs.getString("DESCRICAO");
                 Double valor = rs.getDouble("VALOR");
+                Integer estoque = rs.getInt("ESTOQUE");
                 produto.setId(id);
                 produto.setNome(nome);
                 produto.setCodigo(cd);
                 produto.setDescricao(descricao);
                 produto.setValor(valor);
+                produto.setEstoque(estoque);
             }
 
         } catch (SQLException e) {
@@ -112,11 +114,13 @@ public class ProdutoDAO implements IProdutoDAO {
                 String cd = rs.getString("CODIGO");
                 String descricao = rs.getString("DESCRICAO");
                 Double valor = rs.getDouble("VALOR");
+                Integer estoque = rs.getInt("ESTOQUE");
                 produto.setId(id);
                 produto.setNome(nome);
                 produto.setCodigo(cd);
                 produto.setDescricao(descricao);
                 produto.setValor(valor);
+                produto.setEstoque(estoque);
                 list.add(produto);
             }
 
@@ -149,8 +153,8 @@ public class ProdutoDAO implements IProdutoDAO {
 
     private String getSqlInsert() {
         StringBuilder sb = new StringBuilder();
-        sb.append("INSERT INTO tb_produto (CODIGO, NOME, DESCRICAO, VALOR)");
-        sb.append(" VALUES (?, ?, ?, ?)");
+        sb.append("INSERT INTO tb_produto (CODIGO, NOME, DESCRICAO, VALOR, ESTOQUE)");
+        sb.append(" VALUES (?, ?, ?, ?, ?)");
         return sb.toString();
     }
 
@@ -159,12 +163,13 @@ public class ProdutoDAO implements IProdutoDAO {
         stm.setString(2, produto.getNome());
         stm.setString(3, produto.getDescricao());
         stm.setDouble(4, produto.getValor());
+        stm.setInt(5, produto.getEstoque());
     }
 
     private String getSqlUpdate() {
         StringBuilder sb = new StringBuilder();
         sb.append("UPDATE tb_produto");
-        sb.append(" SET NOME = ?, CODIGO = ?, DESCRICAO = ?, VALOR = ?");
+        sb.append(" SET NOME = ?, CODIGO = ?, DESCRICAO = ?, VALOR = ?, ESTOQUE = ?");
         sb.append(" WHERE ID = ?");
         return sb.toString();
     }
@@ -174,7 +179,8 @@ public class ProdutoDAO implements IProdutoDAO {
         stm.setString(2, produto.getCodigo());
         stm.setString(3, produto.getDescricao());
         stm.setDouble(4, produto.getValor());
-        stm.setLong(5, produto.getId());
+        stm.setInt(5, produto.getEstoque());
+        stm.setLong(6, produto.getId());
     }
 
     private String getSqlDelete() {
