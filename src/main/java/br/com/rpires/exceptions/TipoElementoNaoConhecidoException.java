@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.com.rpires.exceptions;
+package main.java.br.com.rpires.exceptions;
 
 /**
  * @author rodrigo.pires

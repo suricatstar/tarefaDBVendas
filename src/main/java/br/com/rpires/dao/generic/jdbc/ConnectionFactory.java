@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.com.rpires.dao.generic.jdbc;
+package main.java.br.com.rpires.dao.generic.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
